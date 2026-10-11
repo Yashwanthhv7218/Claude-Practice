@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amit Kumar - Technical Writer Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            page-break-after: always;
+        }
+
+        .header {
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.95em;
+            color: #555;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+            border-bottom: 1px dotted #3498db;
+        }
+
+        .contact-info a:hover {
+            color: #2980b9;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #2c3e50;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        h3 {
+            font-size: 1.15em;
+            font-weight: 600;
+            color: #34495e;
+            margin-top: 12px;
+            margin-bottom: 5px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 5px;
+        }
+
+        .job-title {
+            font-weight: 700;
+            color: #2c3e50;
+        }
+
+        .company-name {
+            color: #3498db;
+            font-weight: 600;
+        }
+
+        .date-range {
+            color: #7f8c8d;
+            font-style: italic;
+            font-size: 0.95em;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+            line-height: 1.7;
+        }
+
+        .metrics-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 0.95em;
+        }
+
+        .metrics-table th,
+        .metrics-table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .metrics-table th {
+            background-color: #ecf0f1;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+
+        .metrics-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 12px;
+        }
+
+        .skill-category {
+            padding: 12px;
+            background-color: #f8f9fa;
+            border-left: 3px solid #3498db;
+            border-radius: 4px;
+        }
+
+        .skill-category strong {
+            display: block;
+            color: #2c3e50;
+            margin-bottom: 6px;
+            font-size: 0.95em;
+        }
+
+        .skill-category span {
+            display: block;
+            color: #555;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        .summary {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            line-height: 1.8;
+        }
+
+        .summary p {
+            color: #34495e;
+            font-size: 0.95em;
+        }
+
+        .metric-highlight {
+            color: #27ae60;
+            font-weight: 600;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .contact-info a {
+                border-bottom: none;
+                color: #2c3e50;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .job-header {
+                flex-direction: column;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .footer-note {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ecf0f1;
+            font-size: 0.85em;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Amit Kumar</h1>
+            <div class="contact-info">
+                <span>📧 <a href="mailto:amit.kumar@email.com">amit.kumar@email.com</a></span>
+                <span>📱 +91-XXXX-XXXX-XX</span>
+                <span>📍 Hyderabad, India</span>
+                <span>💼 <a href="https://linkedin.com/in/amitkumar" target="_blank">LinkedIn</a></span>
+                <span>🔗 <a href="#" target="_blank">Portfolio</a></span>
+            </div>
+        </div>
+
+        <section>
+            <h2>Professional Summary</h2>
+            <div class="summary">
+                <p>Technical writer with <span class="metric-highlight">2+ years of SaaS documentation experience</span>, proven ability to create high-quality API documentation and user guides. Demonstrated expertise in reducing documentation review cycles, improving clarity metrics, and collaborating with cross-functional teams. <span class="metric-highlight">Performance-rated 4.2/5</span> by manager with exceptional attention to detail <span class="metric-highlight">(4.5/5)</span> and technical depth <span class="metric-highlight">(4.2/5)</span>.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Core Competencies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <strong>Documentation & Writing</strong>
+                    <span>API Documentation, User Guides, Technical Writing, Markdown, Style Guides, Content Architecture</span>
+                </div>
+                <div class="skill-category">
+                    <strong>Tools & Platforms</strong>
+                    <span>Confluence, JIRA, Git, GitHub, MS Office, Documentation Generators</span>
+                </div>
+                <div class="skill-category">
+                    <strong>Technical Skills</strong>
+                    <span>Version Control, Markdown, Process Optimization, Quality Assurance</span>
+                </div>
+                <div class="skill-category">
+                    <strong>Soft Skills</strong>
+                    <span>Attention to Detail, Technical Communication, Problem-Solving, Collaboration</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Professional Experience</h2>
+
+            <div>
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">Technical Writer</h3>
+                        <span class="company-name">CloudBase SaaS</span>
+                    </div>
+                    <span class="date-range">January 2022 – Present</span>
+                </div>
+                <ul>
+                    <li><strong>Delivered high-volume documentation:</strong> Completed <span class="metric-highlight">45+ JIRA documentation tasks</span> in H1 2024, maintaining <span class="metric-highlight">average 3-day turnaround time</span> and 100% on-time delivery rate</li>
+                    <li><strong>Enhanced API documentation quality:</strong> Improved API documentation clarity score from <span class="metric-highlight">3.5/5 to 4.3/5</span> (<span class="metric-highlight">+22.9% improvement</span>) through iterative revisions and proactive stakeholder collaboration</li>
+                    <li><strong>Created comprehensive user guides:</strong> Authored <span class="metric-highlight">12 new user guides</span> with <span class="metric-highlight">85% positive feedback</span> from product team reviews, enabling faster user onboarding</li>
+                    <li><strong>Optimized documentation workflows:</strong> Reduced documentation review cycle by <span class="metric-highlight">20%</span> through better initial drafts and streamlined review processes</li>
+                    <li><strong>Maintained Confluence documentation:</strong> Single-handedly managed and updated Confluence space with <span class="metric-highlight">50+ documentation articles</span>, ensuring consistency across SaaS platform</li>
+                    <li><strong>Technical competencies:</strong> Demonstrated strong technical depth (4.2/5 rating) and attention to detail (4.5/5 rating) in complex API and infrastructure documentation</li>
+                </ul>
+            </div>
+
+            <div>
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">Content Writer</h3>
+                        <span class="company-name">Digital Agency XYZ</span>
+                    </div>
+                    <span class="date-range">June 2020 – December 2021</span>
+                </div>
+                <ul>
+                    <li><strong>Created diverse content:</strong> Authored <span class="metric-highlight">30+ blog posts and website content pieces</span>, driving organic traffic and establishing thought leadership</li>
+                    <li><strong>Managed knowledge infrastructure:</strong> Maintained and organized knowledge base with <span class="metric-highlight">100+ articles</span>, improving content discoverability and user access</li>
+                    <li><strong>Transitioned to technical writing:</strong> Successfully contributed to technical documentation projects, bridging gap between marketing and technical writing disciplines</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Key Achievements & Metrics</h2>
+            <table class="metrics-table">
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Result</th>
+                        <th>Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>JIRA Tasks Completed (H1 2024)</td>
+                        <td><strong>45+ tasks</strong></td>
+                        <td>Consistent delivery with 3-day avg turnaround</td>
+                    </tr>
+                    <tr>
+                        <td>API Documentation Clarity Score</td>
+                        <td><strong>3.5 → 4.3/5</strong></td>
+                        <td>+22.9% improvement through iterative refinement</td>
+                    </tr>
+                    <tr>
+                        <td>User Guide Creation</td>
+                        <td><strong>12 guides</strong></td>
+                        <td>85% positive feedback from product team</td>
+                    </tr>
+                    <tr>
+                        <td>Documentation Review Cycle</td>
+                        <td><strong>-20% reduction</strong></td>
+                        <td>Faster time-to-publish through process optimization</td>
+                    </tr>
+                    <tr>
+                        <td>Manager Performance Rating</td>
+                        <td><strong>4.2/5</strong></td>
+                        <td>Top performer in technical writing competencies</td>
+                    </tr>
+                    <tr>
+                        <td>Attention to Detail</td>
+                        <td><strong>4.5/5</strong></td>
+                        <td>Highest-rated individual competency</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <h3>Bachelor of Technology in Computer Science</h3>
+            <p>Osmania University, Hyderabad | <span class="date-range">Graduated 2020</span></p>
+        </section>
+
+        <section>
+            <h2>Technical Proficiencies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <strong>Documentation Platforms</strong>
+                    <span>Confluence, JIRA, GitHub Pages, Markdown</span>
+                </div>
+                <div class="skill-category">
+                    <strong>Writing Formats</strong>
+                    <span>API Docs, User Guides, Technical Specs, Release Notes, KB Articles</span>
+                </div>
+                <div class="skill-category">
+                    <strong>Programming & Tools</strong>
+                    <span>Git/GitHub, Command-line Basics, Markdown, YAML, JSON</span>
+                </div>
+                <div class="skill-category">
+                    <strong>Languages</strong>
+                    <span>English (Professional), Hindi (Native)</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Professional Development</h2>
+            <ul>
+                <li>Continuous learner with demonstrated growth trajectory and receptiveness to feedback</li>
+                <li>Strong foundation in API documentation best practices and developer experience</li>
+                <li>Proficient in translating product requirements into clear, accessible technical content</li>
+            </ul>
+        </section>
+
+        <section>
+            <div class="footer-note">
+                <p><strong>Resume Last Updated:</strong> July 2024 | <strong>Format:</strong> Modern, ATS-Optimized HTML/Markdown | <strong>Print-Friendly:</strong> Yes</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

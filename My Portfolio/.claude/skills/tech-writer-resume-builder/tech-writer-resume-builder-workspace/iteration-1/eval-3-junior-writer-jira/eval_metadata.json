@@ -1,0 +1,47 @@
+{
+  "eval_id": 3,
+  "eval_name": "junior-writer-jira-metrics",
+  "prompt": "I'm a technical writer in India with contributions tracked in JIRA tasks over the past 2 years. I have my outdated resume, a PDF from my manager showing my Betterworks performance review with ratings on clarity and technical depth, and an old CV. I need a modern, ATS-friendly resume for job applications. Please generate both Markdown and HTML versions that highlight my impact through quantified metrics and showcase my portfolio potential.",
+  "assertions": [
+    {
+      "name": "resume-markdown-exists",
+      "description": "Outputs include a resume.md file in ATS-optimized Markdown"
+    },
+    {
+      "name": "resume-html-exists",
+      "description": "Outputs include a valid, responsive resume.html file for GitHub hosting"
+    },
+    {
+      "name": "jira-metrics-quantified",
+      "description": "Resume includes quantified JIRA metrics (45 tasks, 3-day turnaround, etc.)"
+    },
+    {
+      "name": "clarity-improvement-featured",
+      "description": "Highlights clarity score improvement (3.5 → 4.3/5, 23% improvement) from Betterworks"
+    },
+    {
+      "name": "vague-language-eliminated",
+      "description": "Original vague statements ('Write API documentation') are transformed into specific achievements with metrics"
+    },
+    {
+      "name": "performance-rating-integrated",
+      "description": "Incorporates Betterworks ratings (4.2/5 overall, 4.5/5 attention to detail) as credibility signals"
+    },
+    {
+      "name": "growth-trajectory-clear",
+      "description": "Resume shows clear growth trajectory and positive performance trend (2020 CV → 2024 achievements)"
+    },
+    {
+      "name": "portfolio-placeholders",
+      "description": "Includes portfolio/GitHub section with placeholders for future documentation samples"
+    },
+    {
+      "name": "ats-optimization-verified",
+      "description": "Markdown follows ATS best practices: single column, no tables, standard fonts, quantified content"
+    },
+    {
+      "name": "high-value-keywords-present",
+      "description": "Includes technical keywords valuable for market positioning (Git, Markdown, Docusaurus, API, CI/CD)"
+    }
+  ]
+}

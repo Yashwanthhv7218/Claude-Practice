@@ -1,0 +1,47 @@
+{
+  "eval_id": 2,
+  "eval_name": "ai-saas-documentation-engineer",
+  "prompt": "I'm a technical writer working at an AI-focused SaaS company, and I want to refresh my resume to highlight my contributions to our API documentation and emerging AI tooling experience. I have my current resume, my manager's Betterworks review showing strong feedback, and an older version of my CV. Can you create both Markdown and HTML versions that emphasize my documentation engineering work and are optimized for ATS parsing? I want the HTML version to be portfolio-ready for GitHub Pages.",
+  "assertions": [
+    {
+      "name": "resume-markdown-exists",
+      "description": "Outputs include a properly formatted resume.md file"
+    },
+    {
+      "name": "resume-html-exists",
+      "description": "Outputs include a valid, responsive resume.html file"
+    },
+    {
+      "name": "ai-llm-expertise-highlighted",
+      "description": "Resume prominently features AI/LLM documentation expertise and prompt engineering skills"
+    },
+    {
+      "name": "quantified-api-documentation",
+      "description": "Includes quantified metrics on API documentation impact (e.g., reduced support questions, developer audience size)"
+    },
+    {
+      "name": "documentation-engineering-terminology",
+      "description": "Uses modern 'documentation engineer' or 'documentation engineering' terminology, not just 'technical writer'"
+    },
+    {
+      "name": "ci-cd-automation-featured",
+      "description": "Highlights CI/CD automation achievements (e.g., bug detection rates, automation percentage)"
+    },
+    {
+      "name": "high-value-specialty-keywords",
+      "description": "Includes high-value, specialty keywords: API Documentation, OpenAPI, Docusaurus, CI/CD, GitHub Actions, LLM"
+    },
+    {
+      "name": "manager-rating-integrated",
+      "description": "Incorporates manager performance ratings (4.7/5 overall, competency scores) as validation"
+    },
+    {
+      "name": "portfolio-github-ready",
+      "description": "HTML version is self-contained, responsive, and explicitly GitHub Pages ready"
+    },
+    {
+      "name": "mentorship-leadership",
+      "description": "Highlights mentorship and team development contributions from performance review"
+    }
+  ]
+}

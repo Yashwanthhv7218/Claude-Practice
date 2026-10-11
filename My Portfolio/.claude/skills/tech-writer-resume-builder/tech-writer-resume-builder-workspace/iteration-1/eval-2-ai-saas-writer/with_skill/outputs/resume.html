@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Priya Sharma - Documentation Engineer specializing in API documentation and AI/LLM tooling">
+    <title>Priya Sharma | Documentation Engineer | API & AI/LLM Specialist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #1e40af;
+            --secondary-color: #1f2937;
+            --accent-color: #0891b2;
+            --light-bg: #f9fafb;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --border-color: #e5e7eb;
+            --success-color: #10b981;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: white;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+        }
+
+        /* Header Section */
+        header {
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .contact-info a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-divider {
+            color: var(--border-color);
+        }
+
+        /* Professional Summary */
+        .summary {
+            background: var(--light-bg);
+            padding: 20px;
+            border-left: 4px solid var(--accent-color);
+            margin-bottom: 32px;
+            border-radius: 4px;
+            line-height: 1.7;
+        }
+
+        .summary p {
+            color: var(--text-dark);
+        }
+
+        /* Section Headers */
+        h2 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-top: 32px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--border-color);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 700;
+        }
+
+        h2:first-child {
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            margin-top: 20px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .job-title {
+            color: var(--accent-color);
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .job-meta {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+
+        /* Experience Section */
+        .experience-item {
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+        }
+
+        .experience-item:not(:last-child) {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .experience-item ul {
+            list-style: none;
+            margin-top: 12px;
+        }
+
+        .experience-item li {
+            margin-bottom: 10px;
+            padding-left: 24px;
+            position: relative;
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        .experience-item li:before {
+            content: "▪";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .metric {
+            color: var(--success-color);
+            font-weight: 600;
+        }
+
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 16px;
+        }
+
+        .skill-category {
+            background: var(--light-bg);
+            padding: 16px;
+            border-radius: 4px;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .skill-category h4 {
+            color: var(--primary-color);
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .skill-category p {
+            color: var(--text-dark);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: white;
+            color: var(--primary-color);
+            padding: 4px 10px;
+            margin: 4px 4px 4px 0;
+            border: 1px solid var(--primary-color);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Performance & Recognition */
+        .recognition-item {
+            background: var(--light-bg);
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 4px;
+            border-left: 4px solid var(--success-color);
+        }
+
+        .recognition-item strong {
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .rating {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .recognition-item p {
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .recognition-item p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Education */
+        .education-item {
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+        }
+
+        .education-item:last-child {
+            border-bottom: none;
+        }
+
+        .degree {
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+        .institution {
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 24px;
+            border-radius: 8px;
+            margin-top: 16px;
+        }
+
+        .portfolio h3 {
+            color: white;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        .portfolio-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+        }
+
+        .portfolio-link {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 12px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .portfolio-link:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .portfolio-link:before {
+            content: "→";
+            font-weight: bold;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                padding: 0;
+                line-height: 1.4;
+            }
+
+            .container {
+                max-width: 100%;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                margin-top: 20px;
+                font-size: 1.3rem;
+            }
+
+            .portfolio {
+                page-break-inside: avoid;
+            }
+
+            a {
+                color: inherit;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-links {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-item li {
+                padding-left: 20px;
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 12px;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            h2 {
+                font-size: 1.1rem;
+                margin-top: 24px;
+            }
+
+            .summary {
+                padding: 16px;
+                font-size: 0.95rem;
+            }
+        }
+
+        /* ATS Optimization - Accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        /* Print-Friendly Color Reduction */
+        @media print {
+            :root {
+                --primary-color: #000;
+                --accent-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: #000;
+            }
+
+            .portfolio {
+                background: #f0f0f0;
+                color: #000;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Priya Sharma</h1>
+            <div class="contact-info">
+                <a href="mailto:priya.sharma@email.com">priya.sharma@email.com</a>
+                <span class="contact-divider">|</span>
+                <span>Bangalore, India</span>
+                <span class="contact-divider">|</span>
+                <a href="https://linkedin.com/in/priyasharma" target="_blank">LinkedIn</a>
+                <span class="contact-divider">|</span>
+                <a href="https://github.com/priyasharma" target="_blank">GitHub</a>
+            </div>
+        </header>
+
+        <!-- Professional Summary -->
+        <section>
+            <h2>Professional Summary</h2>
+            <div class="summary">
+                <p>Documentation Engineer with 4+ years of SaaS technical writing experience, specializing in API documentation and AI/LLM tooling. Proven expertise in translating complex machine learning and API concepts into clear, developer-centric documentation. Skilled in docs-as-code workflows, OpenAPI/Swagger specifications, and documentation automation with CI/CD pipelines. Demonstrated track record of reducing developer support load through comprehensive, well-architected documentation systems. Strong proficiency in Docusaurus, MkDocs, Markdown, and Git-based version control.</p>
+            </div>
+        </section>
+
+        <!-- Professional Experience -->
+        <section>
+            <h2>Professional Experience</h2>
+
+            <div class="experience-item">
+                <h3>Documentation Engineer</h3>
+                <div class="job-title">AIFlow Technologies</div>
+                <div class="job-meta">July 2021 - Present</div>
+                <ul>
+                    <li><strong>Spearheaded ML API Documentation Hub Launch:</strong> Created comprehensive API documentation for ML model deployment endpoints using OpenAPI/Swagger specifications, serving <span class="metric">2,500+ active developers</span> and reducing API-related support questions by <span class="metric">35%</span></li>
+                    <li><strong>Optimized Documentation Performance:</strong> Led migration of legacy documentation to Docusaurus, improving page load time by <span class="metric">57%</span> (from 4.2s to 1.8s) and site performance metrics by <span class="metric">50%</span>, enhancing user retention and SEO rankings</li>
+                    <li><strong>Pioneered AI/LLM Documentation Best Practices:</strong> Authored <span class="metric">40+ technical guides</span> covering AI model fine-tuning, prompt engineering, and GPT-4 API integration patterns, establishing organizational standards for AI tooling documentation</li>
+                    <li><strong>Implemented Automated Documentation Testing:</strong> Built CI/CD documentation testing pipeline (GitHub Actions, GitLab CI) that reduced production documentation bugs from <span class="metric">12 per quarter to 2 per quarter</span> and caught <span class="metric">95%</span> of broken code examples before release</li>
+                    <li><strong>Mentored Junior Documentation Engineer:</strong> Provided technical guidance and architectural feedback to junior team member, who independently led <span class="metric">3 major documentation releases</span></li>
+                    <li><strong>Information Architecture Leadership:</strong> Designed and implemented documentation taxonomy and navigation structure, improving user findability and reducing search times for common queries</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Technical Writer</h3>
+                <div class="job-title">DataViz Pro</div>
+                <div class="job-meta">March 2020 - June 2021</div>
+                <ul>
+                    <li>Created API reference documentation and user guides for data visualization platform, serving <span class="metric">50,000+ monthly users</span></li>
+                    <li>Developed interactive tutorials and video transcripts that increased user engagement by <span class="metric">25%</span></li>
+                    <li>Managed documentation Git repository, implemented peer review process, and established documentation standards</li>
+                    <li>Collaborated with engineering team to improve code sample quality and technical accuracy</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h4>Documentation Engineering</h4>
+                    <p>API Documentation, OpenAPI/Swagger, Documentation Architecture, Information Architecture, Docs-as-Code</p>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Tools & Platforms</h4>
+                    <p>Docusaurus, MkDocs, Markdown, Confluence, GitHub Pages, Technical SEO</p>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Version Control & DevOps</h4>
+                    <p>Git, GitHub, GitLab, GitHub Actions, GitLab CI, CI/CD Pipelines</p>
+                </div>
+
+                <div class="skill-category">
+                    <h4>AI/LLM & Technical Knowledge</h4>
+                    <p>AI/LLM Documentation, Prompt Engineering, Machine Learning Concepts, ML Model Deployment, Large Language Models, Fine-tuning Tutorials</p>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Programming & Scripting</h4>
+                    <p>Python, JavaScript, HTML/CSS</p>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Soft Skills & Process</h4>
+                    <p>Technical Writing, Clear Communication, Cross-functional Collaboration, Process Improvement, Mentorship</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Performance Recognition -->
+        <section>
+            <h2>Performance Recognition</h2>
+
+            <div class="recognition-item">
+                <strong>Betterworks Annual Review (2024)</strong>
+                <span class="rating">4.7/5 Overall Rating</span>
+                <p><strong style="color: var(--primary-color);">Technical Proficiency: 5/5</strong> — "Exceptional understanding of API design, ML concepts, and documentation architecture"</p>
+                <p><strong style="color: var(--primary-color);">Communication: 4.7/5</strong> — "Writes with clarity and precision. Can explain complex AI topics to non-technical audiences"</p>
+                <p><strong style="color: var(--primary-color);">Innovation: 5/5</strong> — "Proactively identified and implemented automation opportunities"</p>
+                <p><strong style="color: var(--primary-color);">Quality & Attention to Detail: 5/5</strong> — "Catches edge cases others miss. Documentation is production-ready on first review 90% of the time"</p>
+            </div>
+
+            <div class="recognition-item">
+                <strong>Manager Assessment</strong>
+                <p>"Priya is one of our top documentation engineers. Her work on the ML API documentation set a new standard for our organization. She shows strong initiative in identifying process improvements and mentors others effectively. Recommended for Senior Documentation Engineer role."</p>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section>
+            <h2>Education</h2>
+            <div class="education-item">
+                <div class="degree">Bachelor of Engineering in Information Technology</div>
+                <div class="institution">Veermata Jijabai Technological Institute, Mumbai</div>
+                <div style="color: var(--text-light); font-size: 0.95rem;">Graduated: 2020</div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section>
+            <div class="portfolio">
+                <h3>Portfolio & GitHub Projects</h3>
+                <div class="portfolio-links">
+                    <a href="https://github.com/priyasharma" target="_blank" class="portfolio-link">GitHub Profile</a>
+                    <a href="https://github.com/priyasharma/api-docs" target="_blank" class="portfolio-link">API Documentation</a>
+                    <a href="https://github.com/priyasharma/docusaurus-examples" target="_blank" class="portfolio-link">Docusaurus Examples</a>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

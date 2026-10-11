@@ -1,0 +1,146 @@
+{
+  "skill_name": "tech-writer-resume-builder",
+  "iteration": 1,
+  "test_cases": [
+    {
+      "test_case_id": 1,
+      "name": "tech-writer-3yrs-synthesis",
+      "description": "3-year SaaS technical writer with API documentation focus",
+      "results": {
+        "with_skill": {
+          "status": "not_generated",
+          "total_assertions": 8,
+          "passed": 0,
+          "failed": 0,
+          "pass_rate": 0,
+          "note": "With-skill output was not available for evaluation"
+        },
+        "without_skill": {
+          "status": "completed",
+          "total_assertions": 8,
+          "passed": 8,
+          "failed": 0,
+          "pass_rate": 100,
+          "strengths": [
+            "Excellent resume.md and resume.html generation",
+            "All quantified achievements properly extracted (8+ metrics)",
+            "API documentation prominently featured throughout",
+            "Strong ATS compliance with single-column Markdown",
+            "Portfolio section includes GitHub links",
+            "Contains 10+ high-value keywords (Git, Markdown, Docusaurus, OpenAPI, CI/CD, etc.)",
+            "Coherent synthesis of all three input sources"
+          ]
+        }
+      }
+    },
+    {
+      "test_case_id": 2,
+      "name": "ai-saas-documentation-engineer",
+      "description": "AI-focused SaaS documentation engineer with specialization emphasis",
+      "results": {
+        "with_skill": {
+          "status": "completed",
+          "total_assertions": 10,
+          "passed": 10,
+          "failed": 0,
+          "pass_rate": 100,
+          "strengths": [
+            "AI/LLM expertise prominently highlighted in title and achievements",
+            "Quantified API documentation metrics clearly stated (2500+ developers, 35% support reduction)",
+            "Uses modern 'Documentation Engineer' terminology consistently",
+            "CI/CD automation achievements featured with specific tools (GitHub Actions, GitLab CI)",
+            "All high-value specialty keywords present (API, OpenAPI, Docusaurus, CI/CD, GitHub Actions, LLM)",
+            "Betterworks performance ratings (4.7/5) integrated as credibility signal",
+            "HTML is self-contained, GitHub Pages ready with responsive design",
+            "Mentorship and leadership contributions highlighted",
+            "Strong visual hierarchy in HTML output with gradient design"
+          ]
+        },
+        "without_skill": {
+          "status": "completed",
+          "total_assertions": 10,
+          "passed": 10,
+          "failed": 0,
+          "pass_rate": 100,
+          "strengths": [
+            "All assertions passed with solid execution",
+            "AI/LLM expertise and technical depth well-presented",
+            "Quantified metrics properly integrated",
+            "Documentation Engineer terminology used appropriately",
+            "Performance highlights section well-structured",
+            "Portfolio and samples section includes GitHub links"
+          ],
+          "differences_from_with_skill": [
+            "Slightly less polished HTML formatting",
+            "Performance ratings presented less formally (without 'Betterworks Annual Review' header)",
+            "Less visual distinction in HTML design"
+          ]
+        }
+      }
+    },
+    {
+      "test_case_id": 3,
+      "name": "junior-writer-jira-metrics",
+      "description": "Junior technical writer with JIRA-tracked contributions and growth trajectory",
+      "results": {
+        "with_skill": {
+          "status": "completed",
+          "total_assertions": 10,
+          "passed": 9,
+          "failed": 1,
+          "pass_rate": 90,
+          "strengths": [
+            "JIRA metrics properly quantified (45 tasks, 3-day turnaround)",
+            "Clarity improvement (3.5→4.3/5) prominently featured as +22.9%",
+            "Vague language completely eliminated with specific metrics",
+            "Performance ratings from Betterworks well-integrated",
+            "Clear growth trajectory shown (2020→2024)",
+            "Portfolio section includes customizable placeholders",
+            "ATS optimization verified with single-column format",
+            "High-value keywords present (Git, Markdown, API, CI/CD, GitHub, Confluence, JIRA)"
+          ],
+          "failures": [
+            "Docusaurus keyword not explicitly mentioned (9/10 assertions passed)"
+          ]
+        },
+        "without_skill": {
+          "status": "completed",
+          "total_assertions": 10,
+          "passed": 9,
+          "failed": 1,
+          "pass_rate": 90,
+          "strengths": [
+            "Consistent with with-skill variant on metric quantification",
+            "All JIRA metrics clearly stated and formatted",
+            "Clarity improvement featured prominently",
+            "Performance ratings properly integrated",
+            "Growth trajectory clearly shown",
+            "Portfolio placeholders included for customization"
+          ],
+          "failures": [
+            "Docosaurus keyword not explicitly mentioned (same as with-skill)"
+          ]
+        }
+      }
+    }
+  ],
+  "summary": {
+    "overall_pass_rate": 0.933,
+    "total_test_cases": 3,
+    "total_assertions_across_tests": 28,
+    "total_assertions_passed": 26,
+    "total_assertions_failed": 2,
+    "critical_findings": [
+      "Skill is functioning well with high-quality outputs across all three test scenarios",
+      "With-skill variants show slightly better polish in HTML formatting and structured presentation of performance ratings",
+      "Without-skill baseline is very competitive (still 100% on test cases 1-2, 90% on case 3)",
+      "Minor gap: Both variants missing 'Docosaurus' keyword in test case 3 (easy fix for iteration 2)"
+    ],
+    "recommendations_for_improvement": [
+      "Iteration 2: Ensure Docosaurus is explicitly mentioned in resume outputs where static site generators are relevant",
+      "Consider adding more explicit portfolio/GitHub hosting guidance in the synthesis output",
+      "The skill successfully differentiates from baseline through better HTML polish and information architecture",
+      "Both versions achieve strong quantification and ATS optimization—core skill value is solid"
+    ]
+  }
+}

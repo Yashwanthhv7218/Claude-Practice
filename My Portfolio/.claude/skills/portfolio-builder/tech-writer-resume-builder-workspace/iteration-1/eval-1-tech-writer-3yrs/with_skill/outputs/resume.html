@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="John Doe - Technical Writer & Documentation Engineer. 3+ years SaaS API documentation experience. ATS-optimized resume.">
+    <title>John Doe - Technical Writer & Documentation Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            page-break-after: always;
+        }
+
+        /* Header & Contact */
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.95em;
+            color: #555;
+        }
+
+        .contact-info a {
+            color: #2980b9;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .contact-info a:hover {
+            border-bottom-color: #2980b9;
+        }
+
+        /* Professional Summary */
+        .summary {
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #3498db;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            line-height: 1.8;
+        }
+
+        .summary h2 {
+            font-size: 1.2em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 30px;
+        }
+
+        section h2 {
+            font-size: 1.4em;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        /* Experience */
+        .job {
+            margin-bottom: 25px;
+            page-break-inside: avoid;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+
+        .job-title {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .job-company {
+            font-weight: 600;
+            color: #34495e;
+        }
+
+        .job-dates {
+            color: #7f8c8d;
+            font-style: italic;
+            white-space: nowrap;
+        }
+
+        .job ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .job li {
+            padding-left: 20px;
+            margin-bottom: 10px;
+            position: relative;
+            color: #444;
+            line-height: 1.7;
+        }
+
+        .job li:before {
+            content: "▪";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .job li strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            page-break-inside: avoid;
+        }
+
+        .skill-category h3 {
+            font-size: 0.95em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .skill-category p {
+            font-size: 0.9em;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Education */
+        .education-item {
+            margin-bottom: 15px;
+            page-break-inside: avoid;
+        }
+
+        .education-item .degree {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .education-item .institution {
+            color: #34495e;
+        }
+
+        .education-item .year {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        /* Recognition & Metrics */
+        .recognition {
+            background: #e8f4f8;
+            padding: 15px;
+            border-left: 4px solid #27ae60;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+
+        .recognition strong {
+            color: #2c3e50;
+        }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .metric {
+            background: #f0f8ff;
+            padding: 12px;
+            border-left: 3px solid #3498db;
+            border-radius: 4px;
+        }
+
+        .metric-label {
+            font-size: 0.85em;
+            color: #7f8c8d;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .metric-value {
+            font-size: 1.3em;
+            color: #27ae60;
+            font-weight: 700;
+            margin-top: 5px;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            background: #fef5e7;
+            padding: 15px;
+            border-left: 4px solid #f39c12;
+            border-radius: 4px;
+        }
+
+        .portfolio a {
+            color: #2980b9;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .portfolio a:hover {
+            border-bottom-color: #2980b9;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .job-header {
+                flex-direction: column;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .metrics {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                padding: 0;
+                border-radius: 0;
+            }
+
+            .contact-info a {
+                color: #333;
+                text-decoration: none;
+            }
+
+            a {
+                color: inherit;
+            }
+
+            section {
+                page-break-inside: avoid;
+            }
+        }
+
+        /* Accessibility */
+        a:focus {
+            outline: 2px solid #3498db;
+            outline-offset: 2px;
+        }
+
+        h1:focus,
+        h2:focus,
+        h3:focus {
+            outline: 2px solid #3498db;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>John Doe</h1>
+            <div class="contact-info">
+                <span>john.doe@email.com</span>
+                <span>Bangalore, India</span>
+                <a href="https://linkedin.com/in/johndoe">LinkedIn</a>
+                <a href="https://github.com/johndoe">GitHub</a>
+                <a href="https://johndoe.dev">Portfolio</a>
+            </div>
+        </div>
+
+        <!-- Professional Summary -->
+        <div class="summary">
+            <h2>Professional Summary</h2>
+            <p>Highly accomplished Technical Writer and Documentation Engineer with 3+ years of SaaS documentation expertise. Specialized in API documentation, docs-as-code workflows, and developer experience optimization. Proven track record of reducing developer integration time, support tickets, and documentation delivery cycles through clear, comprehensive technical content and process automation. Rated 4.5/5 in annual performance review with 5/5 scores in Communication, Process Improvement, and Quality Focus. Fluent in Markdown, Git, and modern documentation toolchains (Docusaurus, MkDocs, OpenAPI/Swagger).</p>
+        </div>
+
+        <!-- Experience -->
+        <section>
+            <h2>Professional Experience</h2>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Senior Technical Writer</div>
+                        <div class="job-company">TechCorp SaaS</div>
+                    </div>
+                    <div class="job-dates">January 2022 - Present</div>
+                </div>
+                <ul>
+                    <li><strong>Spearheaded API documentation overhaul</strong> reducing developer support tickets by 28% and improving clarity score from 3.8/5 to 4.6/5 through comprehensive OpenAPI/Swagger documentation and interactive code examples</li>
+                    <li>Authored 150+ API reference documents using OpenAPI/Swagger specifications, reducing developer integration time by 40%</li>
+                    <li>Designed information architecture for product documentation site in Docusaurus, improving user engagement by 35%</li>
+                    <li><strong>Introduced automated documentation testing</strong> using CI/CD pipelines, catching 95% of broken code examples before production and reducing critical production issues to zero</li>
+                    <li><strong>Led Git-based documentation migration</strong> from Confluence, enabling version control, peer review, and reducing team's weekly workload by 8 hours</li>
+                    <li><strong>Delivered 12 major documentation releases</strong> on schedule with zero critical user-reported issues</li>
+                    <li><strong>Mentored 2 junior technical writers</strong> with both receiving positive feedback on their first independent documentation projects</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Technical Writer</div>
+                        <div class="job-company">DevOps Solutions</div>
+                    </div>
+                    <div class="job-dates">June 2020 - December 2021</div>
+                </div>
+                <ul>
+                    <li>Created user guides, getting-started tutorials, and API documentation for cloud deployment platform serving 50,000+ monthly users</li>
+                    <li>Maintained JIRA documentation task pipeline ensuring 99% on-time delivery of scheduled documentation releases</li>
+                    <li>Collaborated with engineering team to document REST APIs and improve code sample quality and developer onboarding experience</li>
+                    <li>Established troubleshooting guides and FAQ sections reducing support escalations by improving self-service documentation effectiveness</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Documentation & Markup</h3>
+                    <p>API Documentation, OpenAPI/Swagger, Markdown, HTML/CSS, Docusaurus, MkDocs, Confluence</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Developer Tools</h3>
+                    <p>Git/GitHub, CI/CD Pipelines, JIRA, Automated Testing, Version Control</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Programming & Scripting</h3>
+                    <p>Python, JavaScript, Basic Shell Scripting</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Technical Writing</h3>
+                    <p>Information Architecture, UX Writing, Developer Documentation, Code Sample Documentation, Technical SEO</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <p>Process Improvement, Mentorship, Cross-functional Collaboration, Technical Communication, Attention to Detail</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section>
+            <h2>Education</h2>
+            <div class="education-item">
+                <div class="degree">Bachelor of Technology in Computer Science</div>
+                <div class="institution">Indian Institute of Technology, Bangalore</div>
+                <div class="year">Graduated 2020</div>
+            </div>
+        </section>
+
+        <!-- Recognition & Performance -->
+        <section>
+            <h2>Certifications & Recognition</h2>
+            <div class="recognition">
+                <strong>Betterworks Annual Review 2024: 4.5/5</strong> overall rating with exceptional scores in Communication (5/5), Process Improvement (5/5), and Quality Focus (5/5). Technical Proficiency: 4/5. Manager notes highlight exceptional attention to detail and strong initiative in identifying process improvements.
+            </div>
+            <div class="recognition">
+                <strong>Performance Recognition:</strong> Identified and implemented Git migration process improvement (8 hours/week team productivity savings).
+            </div>
+            <div class="recognition">
+                <strong>Documentation Excellence:</strong> Zero critical production issues across 12 major releases in current role. 95% of broken code examples caught before production via automated testing.
+            </div>
+        </section>
+
+        <!-- Key Metrics -->
+        <section>
+            <h2>Key Impact Metrics</h2>
+            <div class="metrics">
+                <div class="metric">
+                    <div class="metric-label">Support Tickets</div>
+                    <div class="metric-value">↓ 28%</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Integration Time</div>
+                    <div class="metric-value">↓ 40%</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Code Quality</div>
+                    <div class="metric-value">95%</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Release Issues</div>
+                    <div class="metric-value">0 Critical</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Team Productivity</div>
+                    <div class="metric-value">+8 hrs/week</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">User Engagement</div>
+                    <div class="metric-value">↑ 35%</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section>
+            <h2>Portfolio & Code Examples</h2>
+            <div class="portfolio">
+                <p><strong>API Documentation Examples:</strong> <a href="#">Link to GitHub docs portfolio - Docusaurus examples</a></p>
+                <p><strong>Git-based Documentation Repo:</strong> <a href="#">Link to documentation repository with peer review workflow</a></p>
+                <p><strong>Code Samples & Tutorials:</strong> <a href="#">Link to interactive code examples and getting-started guides</a></p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

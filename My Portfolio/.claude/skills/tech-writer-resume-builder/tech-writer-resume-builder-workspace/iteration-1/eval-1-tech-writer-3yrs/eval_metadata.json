@@ -1,0 +1,39 @@
+{
+  "eval_id": 1,
+  "eval_name": "tech-writer-3yrs-synthesis",
+  "prompt": "I've been working as a technical writer at a SaaS company for 3 years, and I have three documents: my current resume (a bit outdated), a PDF of my latest Betterworks performance review from my manager, and an old CV from 2021. I need to create a modern, ATS-friendly resume that showcases my API documentation work and my GitHub portfolio. Can you generate both a Markdown and HTML version that I can host on GitHub?",
+  "assertions": [
+    {
+      "name": "resume-markdown-exists",
+      "description": "Outputs include a resume.md file in proper Markdown format"
+    },
+    {
+      "name": "resume-html-exists",
+      "description": "Outputs include a resume.html file with valid HTML structure"
+    },
+    {
+      "name": "quantified-achievements",
+      "description": "Resume contains at least 4 quantified achievements (with %, numbers, or metrics) from Betterworks review"
+    },
+    {
+      "name": "api-documentation-emphasis",
+      "description": "API documentation expertise is prominently featured in summary or top achievements"
+    },
+    {
+      "name": "ats-compliance",
+      "description": "Markdown resume uses single-column layout, no tables, standard structure for ATS parsing"
+    },
+    {
+      "name": "portfolio-section",
+      "description": "HTML includes a portfolio/GitHub links section with placeholders"
+    },
+    {
+      "name": "high-value-keywords",
+      "description": "Resume includes at least 8 high-value keywords (Git, Markdown, Docusaurus, OpenAPI, CI/CD, etc.)"
+    },
+    {
+      "name": "synthesis-quality",
+      "description": "Resume coherently integrates content from all three input sources (current resume, review, old CV)"
+    }
+  ]
+}

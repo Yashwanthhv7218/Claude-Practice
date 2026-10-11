@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yashwanth HV - Senior Technical Writer Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #1a1b2e;
+            --bg2: #16213e;
+            --bg3: #0f3460;
+            --accent: #7c3aed;
+            --accent2: #06b6d4;
+            --accent3: #a855f7;
+            --text: #cdd6f4;
+            --text2: #a6adc8;
+            --text3: #6c7086;
+            --card: #1e2139;
+            --card2: #252640;
+            --border: #313244;
+            --border2: #414268;
+            --green: #a6e3a1;
+            --yellow: #f9e2af;
+            --blue: #89b4fa;
+            --pink: #cba6f7;
+            --red: #f38ba8;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent);
+            border-radius: 4px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .resume-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .name {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, var(--text), var(--accent2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .title {
+            font-size: 1.1rem;
+            color: var(--accent2);
+            font-weight: 500;
+            margin-bottom: 1rem;
+            letter-spacing: 0.05em;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            font-size: 0.85rem;
+            color: var(--text2);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-link {
+            color: var(--accent2);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-link:hover {
+            color: var(--accent);
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--accent2);
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            letter-spacing: 0.03em;
+        }
+
+        .section-title::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 1.3rem;
+            background: linear-gradient(180deg, var(--accent), var(--accent2));
+            border-radius: 2px;
+        }
+
+        .summary {
+            background: rgba(26, 27, 46, 0.6);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            color: var(--text2);
+            line-height: 1.8;
+            font-size: 0.95rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .entry {
+            margin-bottom: 1.75rem;
+            padding-bottom: 1.75rem;
+            border-bottom: 1px solid var(--border2);
+        }
+
+        .entry:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .entry-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .entry-company {
+            color: var(--accent2);
+            font-weight: 500;
+        }
+
+        .entry-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+            color: var(--text3);
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .entry-date {
+            color: var(--accent3);
+            font-family: 'Courier New', monospace;
+        }
+
+        .entry-description {
+            color: var(--text2);
+            line-height: 1.7;
+        }
+
+        .entry-description ul {
+            margin-left: 1.25rem;
+            margin-top: 0.75rem;
+        }
+
+        .entry-description li {
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-item {
+            display: inline-block;
+            background: rgba(124, 58, 237, 0.1);
+            color: var(--accent);
+            padding: 0.35rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            border: 1px solid rgba(124, 58, 237, 0.3);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-category {
+            background: rgba(26, 27, 46, 0.6);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.25rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .skill-category-title {
+            color: var(--accent2);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: rgba(6, 182, 212, 0.15);
+            color: var(--accent2);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            transition: all 0.2s;
+        }
+
+        .skill-tag:hover {
+            background: rgba(6, 182, 212, 0.25);
+            border-color: var(--accent2);
+        }
+
+        .metrics-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .metrics-table th,
+        .metrics-table td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border2);
+        }
+
+        .metrics-table th {
+            background: rgba(124, 58, 237, 0.1);
+            color: var(--accent2);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.03em;
+        }
+
+        .metrics-table tr:hover {
+            background: rgba(6, 182, 212, 0.05);
+        }
+
+        .metrics-value {
+            color: var(--accent);
+            font-weight: 600;
+            font-family: 'Courier New', monospace;
+        }
+
+        .footer {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text3);
+            font-size: 0.85rem;
+            margin-top: 2rem;
+        }
+
+        .footer-text {
+            margin: 0.5rem 0;
+        }
+
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .container {
+                max-width: 100%;
+                padding: 0;
+            }
+
+            section {
+                page-break-inside: avoid;
+            }
+
+            .section-title {
+                color: #1a1b2e;
+                border-color: #7c3aed;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1rem;
+            }
+
+            .name {
+                font-size: 2rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 0.75rem;
+                align-items: center;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="resume-header">
+            <h1 class="name">Yashwanth HV</h1>
+            <p class="title">Technical Writer (Informtation Developer) | Digital Adoption Specialist</p>
+            <div class="contact-info">
+                <div class="contact-item">📧 <a href="mailto:[yashwanth.hv7218@gmail.com](mailto:yashwanth.hv7218@gmail.com)" class="contact-link">[yashwanth.hv7218@gmail.com](mailto:yashwanth.hv7218@gmail.com)</a></div>
+                <div class="contact-item">📱 +91-7975-673-971</div>
+                <div class="contact-item">📍 Bengaluru  </div>
+            </div>
+        </div>
+
+        <section>
+            <h2 class="section-title">Professional Summary</h2>
+            <div class="summary">
+                
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Professional Experience</h2>
+            
+        </section>
+
+        <section>
+            <h2 class="section-title">Technical Skills</h2>
+            
+        </section>
+
+        <section>
+            <h2 class="section-title">Education</h2>
+            
+        </section>
+
+        <div class="footer">
+            <p class="footer-text">💡 Designed with a focus on clarity, impact, and modern web standards</p>
+            <p class="footer-text">📄 Print-friendly • 📱 Mobile-responsive • ♿ Accessible</p>
+            <p class="footer-text">🔄 Auto-synced from resume.md on 2026-07-12 23:51:04</p>
+        </div>
+    </div>
+</body>
+</html>

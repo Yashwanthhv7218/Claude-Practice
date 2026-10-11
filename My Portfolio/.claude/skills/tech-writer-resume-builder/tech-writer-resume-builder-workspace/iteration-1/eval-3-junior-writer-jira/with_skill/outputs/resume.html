@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amit Kumar - Technical Writer Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header Styles */
+        .header {
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .name {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .title {
+            font-size: 1.1em;
+            color: #e74c3c;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.95em;
+            color: #555;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-item a {
+            color: #2c3e50;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: #e74c3c;
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #2c3e50;
+            border-left: 4px solid #e74c3c;
+            padding-left: 12px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        h3 {
+            font-size: 1.15em;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+            flex-wrap: wrap;
+        }
+
+        .job-title {
+            font-weight: 700;
+            color: #2c3e50;
+        }
+
+        .company {
+            color: #555;
+            font-weight: 600;
+        }
+
+        .duration {
+            color: #888;
+            font-style: italic;
+            font-size: 0.95em;
+        }
+
+        .location {
+            color: #888;
+            font-size: 0.95em;
+        }
+
+        /* Bullet Points */
+        ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            line-height: 1.7;
+        }
+
+        li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #e74c3c;
+            font-size: 1.2em;
+        }
+
+        /* Skills Section */
+        .skills-category {
+            margin-bottom: 15px;
+        }
+
+        .skills-label {
+            font-weight: 700;
+            color: #2c3e50;
+            display: inline-block;
+            margin-right: 10px;
+            min-width: 150px;
+        }
+
+        .skills-content {
+            display: inline-block;
+            color: #555;
+        }
+
+        /* Summary Section */
+        .summary-text {
+            line-height: 1.8;
+            color: #555;
+            text-align: justify;
+        }
+
+        /* Highlights */
+        .highlights {
+            background-color: #f0f8f7;
+            border-left: 4px solid #e74c3c;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 3px;
+        }
+
+        .highlights h4 {
+            color: #2c3e50;
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .highlight-check {
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .highlight-text {
+            color: #555;
+            font-size: 0.95em;
+        }
+
+        /* Education Section */
+        .education-item {
+            margin-bottom: 15px;
+        }
+
+        .degree {
+            font-weight: 700;
+            color: #2c3e50;
+        }
+
+        .school {
+            color: #555;
+        }
+
+        .grad-year {
+            color: #888;
+            font-style: italic;
+        }
+
+        /* Rating Badge */
+        .rating-badge {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 3px;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-right: 8px;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background-color: white;
+            }
+
+            .container {
+                max-width: 100%;
+                box-shadow: none;
+                padding: 20px;
+            }
+
+            .contact-info {
+                gap: 15px;
+            }
+
+            h2 {
+                page-break-after: avoid;
+            }
+
+            h3 {
+                page-break-after: avoid;
+            }
+
+            section {
+                page-break-inside: avoid;
+            }
+
+            ul {
+                page-break-inside: avoid;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .name {
+                font-size: 2em;
+            }
+
+            .title {
+                font-size: 1em;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .job-header {
+                flex-direction: column;
+            }
+
+            .duration {
+                margin-top: 5px;
+            }
+
+            .highlight-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-label {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            .skills-content {
+                display: block;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px;
+            }
+
+            .name {
+                font-size: 1.7em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            .contact-item {
+                font-size: 0.9em;
+            }
+        }
+
+        /* Link Styles */
+        a {
+            color: #2c3e50;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #e74c3c;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            color: #888;
+            font-size: 0.9em;
+        }
+
+        /* Accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="name">Amit Kumar</h1>
+            <p class="title">Technical Writer | API Documentation Specialist</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📧 <a href="mailto:amit.kumar@email.com">amit.kumar@email.com</a></span>
+                </div>
+                <div class="contact-item">
+                    <span>📍 Hyderabad, India</span>
+                </div>
+                <div class="contact-item">
+                    <span>💼 <a href="https://linkedin.com/in/amitkumar" target="_blank">LinkedIn</a></span>
+                </div>
+                <div class="contact-item">
+                    <span>🔗 <a href="#">GitHub Portfolio</a></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Professional Summary -->
+        <section>
+            <h2>Professional Summary</h2>
+            <p class="summary-text">
+                Technical writer with 2+ years of SaaS documentation experience and a strong track record of delivering high-quality API documentation and user guides. Demonstrated ability to reduce documentation cycle times by 20%, improve content clarity to 4.3/5, and maintain 85% positive feedback from cross-functional teams. Proficient in modern documentation tools including Markdown, Git-based workflows, and structured API documentation. Strong foundation in technical depth and attention to detail with focus on continuous improvement.
+            </p>
+        </section>
+
+        <!-- Key Highlights -->
+        <section class="highlights">
+            <h4>Key Achievements</h4>
+            <div class="highlight-grid">
+                <div class="highlight-item">
+                    <span class="highlight-check">✓</span>
+                    <span class="highlight-text"><strong>45 JIRA tasks</strong> completed in H1 2024</span>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-check">✓</span>
+                    <span class="highlight-text">Clarity score: <strong>3.5 → 4.3/5</strong></span>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-check">✓</span>
+                    <span class="highlight-text"><strong>12 user guides</strong> created</span>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-check">✓</span>
+                    <span class="highlight-text"><strong>85% positive</strong> feedback rate</span>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-check">✓</span>
+                    <span class="highlight-text"><strong>20% faster</strong> review cycles</span>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-check">✓</span>
+                    <span class="highlight-text"><strong>3-day</strong> avg turnaround</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Experience -->
+        <section>
+            <h2>Professional Experience</h2>
+
+            <h3>Technical Writer</h3>
+            <div class="job-header">
+                <span class="company">CloudBase SaaS</span>
+                <span class="location">Hyderabad, India</span>
+            </div>
+            <div class="duration">January 2022 – Present</div>
+            <ul>
+                <li><strong>Completed 45 JIRA documentation tasks in H1 2024</strong> with consistent 3-day average turnaround time, demonstrating reliability and project management discipline</li>
+                <li><strong>Increased API documentation clarity score from 3.5 to 4.3/5</strong> through iterative refinement and alignment with technical specifications</li>
+                <li><strong>Created 12 new user guides</strong> generating 85% positive feedback rate from product team reviews, validating content quality and usability</li>
+                <li><strong>Reduced documentation review cycle by 20%</strong> through improved initial drafts and proactive incorporation of stakeholder feedback</li>
+                <li>Maintained and updated Confluence documentation across multiple products and feature releases</li>
+                <li>Collaborated with product and engineering teams to translate technical specifications into accessible documentation</li>
+            </ul>
+
+            <h3>Content Writer</h3>
+            <div class="job-header">
+                <span class="company">Digital Agency XYZ</span>
+                <span class="location">Hyderabad, India</span>
+            </div>
+            <div class="duration">June 2020 – December 2021</div>
+            <ul>
+                <li>Created and maintained website content and blog posts, establishing foundation in web writing best practices</li>
+                <li>Managed knowledge base with focus on clarity and user accessibility</li>
+                <li>Contributed to technical documentation projects, supporting adoption of structured writing practices</li>
+                <li>Developed foundational skills in content organization and information architecture</li>
+            </ul>
+        </section>
+
+        <!-- Core Competencies -->
+        <section>
+            <h2>Core Competencies</h2>
+            <div class="skills-category">
+                <span class="skills-label">Technical Writing:</span>
+                <span class="skills-content">API Documentation, User Guide Development, Technical Specifications, Documentation Review, Content Clarity & Structure</span>
+            </div>
+            <div class="skills-category">
+                <span class="skills-label">Tools & Platforms:</span>
+                <span class="skills-content">Markdown, Git (version control), Confluence, JIRA, MS Office Suite, Documentation Platforms</span>
+            </div>
+            <div class="skills-category">
+                <span class="skills-label">Key Capabilities:</span>
+                <span class="skills-content">Turnaround Time Optimization, Quality Metrics, Stakeholder Feedback Management, Process Efficiency, Cross-functional Collaboration</span>
+            </div>
+            <div class="skills-category">
+                <span class="skills-label">Languages:</span>
+                <span class="skills-content">English (Fluent), Hindi (Native)</span>
+            </div>
+        </section>
+
+        <!-- Performance Ratings -->
+        <section>
+            <h2>Performance Ratings</h2>
+            <p style="margin-bottom: 15px;"><em>2024 Annual Review by Divya Mehta, Manager</em></p>
+            <div class="skills-category">
+                <span class="skills-label">Overall Rating:</span>
+                <span class="rating-badge">4.2/5</span>
+            </div>
+            <div class="skills-category">
+                <span class="skills-label">Technical Writing:</span>
+                <span class="rating-badge">4.0/5</span>
+            </div>
+            <div class="skills-category">
+                <span class="skills-label">Technical Depth:</span>
+                <span class="rating-badge">4.2/5</span>
+            </div>
+            <div class="skills-category">
+                <span class="skills-label">Attention to Detail:</span>
+                <span class="rating-badge">4.5/5</span>
+            </div>
+            <div class="skills-category">
+                <span class="skills-label">Communication:</span>
+                <span class="rating-badge">4.0/5</span>
+            </div>
+            <div class="skills-category">
+                <span class="skills-label">Process Adherence:</span>
+                <span class="rating-badge">4.3/5</span>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section>
+            <h2>Education</h2>
+            <div class="education-item">
+                <div class="degree">Bachelor of Technology, Computer Science</div>
+                <div class="school">Osmania University</div>
+                <div class="location">Hyderabad, India</div>
+                <div class="grad-year">Graduated 2020</div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section>
+            <h2>Portfolio & Links</h2>
+            <ul>
+                <li><strong>GitHub Portfolio:</strong> <a href="#">Add links to documentation samples and open-source contributions</a></li>
+                <li><strong>Writing Samples:</strong> <a href="#">Add links to API documentation samples and user guide examples</a></li>
+                <li><strong>Articles/Blog:</strong> <a href="#">Add links to published technical articles</a></li>
+            </ul>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>References and additional documentation samples available upon request.</p>
+        </footer>
+    </div>
+</body>
+</html>

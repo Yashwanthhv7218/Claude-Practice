@@ -1,0 +1,30 @@
+RESUME - Amit Kumar
+
+Email: amit.kumar@email.com
+Location: Hyderabad, India
+LinkedIn: linkedin.com/in/amitkumar
+
+SUMMARY
+Technical writer with 2+ years of experience in SaaS documentation. Good at writing API docs and user guides. Familiar with Git, Markdown, and documentation tools.
+
+EXPERIENCE
+
+Technical Writer - CloudBase SaaS
+Jan 2022 - Present
+- Write API documentation
+- Maintain user guides
+- Update Confluence documentation
+- Assigned documentation tasks in JIRA
+
+Content Writer - Digital Agency XYZ
+June 2020 - Dec 2021
+- Created website content
+- Managed blog and knowledge base
+- Some technical documentation
+
+EDUCATION
+Bachelor of Technology, Computer Science
+Osmania University, Hyderabad (2020)
+
+SKILLS
+Technical Writing, API Documentation, Markdown, Git, Confluence, JIRA, English, MS Office
